@@ -1,6 +1,8 @@
 import express from 'express';
+import cors from 'cors';
 const app = express();
 app.use(express.json());
+app.use((cors()));
 import { greetUser } from './controllers/greetController.js';
 import { getUserProfile } from './controllers/profileController.js';
 import { getBlogList } from './controllers/blogListController.js';
